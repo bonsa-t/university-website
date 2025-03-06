@@ -1,0 +1,147 @@
+/* Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
+}
+
+body {
+    background: linear-gradient(to bottom, #7b8ffc, #a9b8ff); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure it covers the whole viewport height */
+}
+
+.container {
+    max-width: 450px; /* Narrower container */
+    width: 90%;       /* Responsive width */
+    margin: 20px auto;  /* Centers and adds margin */
+    padding: 30px 40px; /* More padding */
+    background-color: white;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    position: relative; /*for the decorative shape*/
+
+}
+
+/*the decorative shape*/
+.container::before{
+ content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: url("your-image.png"); /* Replace with your actual image */
+    background-size: cover; /* Ensure the image covers the entire area */
+    opacity: 0.5; /* Adjust as needed for desired visibility */
+    top: 0; /* Position it in the corner */
+    left:-100px;
+	z-index:-1;
+}
+
+
+form {
+    /* No need for background here, it's white */
+    padding: 20px 0; /* Removed side padding, added top/bottom */
+    /* border-radius and box-shadow are already on the container */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px; /* More space below the heading */
+    font-size: 1.8em;  /* Larger heading */
+    font-weight: 600;   /* Slightly bolder */
+    color: #333;      /* Darker text */
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px 15px; /* More padding inside inputs */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ced4da; /* Lighter border */
+    border-radius: 8px; /* More rounded inputs */
+    font-size: 16px;  /* Larger font size */
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #7b8ffc; /* Highlight on focus */
+    outline: none;        /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(123, 143, 252, 0.25); /* Subtle glow */
+}
+
+button[type="submit"] {
+    width: 100%;      /* Full-width button */
+    padding: 14px 20px; /* More padding */
+    background: linear-gradient(to right, #7b8ffc, #a9b8ff); /* Gradient button */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded button */
+    cursor: pointer;
+    font-size: 18px;  /* Larger font */
+    font-weight: 500;   /* Slightly bolder */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+	margin-bottom:15px;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(to right, #6374d9, #8fa1e6); /* Darker gradient on hover*/
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+a {
+    display: block;  /* Make the link a block element */
+    text-align: center; /* Center the link text */
+    color: #7b8ffc;   /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin-top: 20px;    /* Space above the link */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #6374d9; /* Darker on hover */
+}
+
+/* (Optional) Placeholder Styles - For more control */
+input::placeholder {
+    color: #999; /* Lighter placeholder text */
+}
+
+/* (Optional) Table Styles - If you need a table later */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fa; /* Light gray background for headers */
+    font-weight: 600;
+}
+
+/* (Optional) Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+    /* Other adjustments for smaller screens as needed */
+}
+
+/* (Optional) */
+/* Style to visually hide the password eye icon */
+input[type="password"] + .eye-icon {
+    display: none; /* This will hide it altogether. */
+}
+/*or you can put visibility:hidden*/
+

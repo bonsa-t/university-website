@@ -1,0 +1,145 @@
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.filters {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.filters form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filters select {
+    padding: 0.8rem;
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    font-size: 1rem;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.filters select:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+.filters button {
+    padding: 0.8rem 2rem;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filters button:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+.gpa-box {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.gpa-item {
+    text-align: center;
+    flex: 1;
+}
+
+.gpa-label {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.gpa-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+th {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+}
+
+tr:hover {
+    background: rgba(52, 152, 219, 0.1);
+}
+
+.logout-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+    margin-top: 2rem;
+}
+
+.logout-btn:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+    .gpa-box {
+        flex-direction: column;
+    }
+
+    .filters form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filters select, 
+    .filters button {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}

@@ -1,0 +1,577 @@
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Section Headers */
+h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary);
+}
+
+/* Grade Form Section */
+.grade-form {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.grade-form form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.grade-form input,
+.grade-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    font-size: 1rem;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.grade-form button[type="submit"] {
+    grid-column: 1 / -1;
+    background: var(--accent);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.grade-form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Filters Section */
+.filters {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.filters form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filters input,
+.filters select {
+    padding: 0.8rem;
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    min-width: 200px;
+    font-size: 1rem;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.filters button {
+    background: var(--secondary);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filters button:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+th {
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+tr:hover {
+    background: rgba(52, 152, 219, 0.1);
+}
+
+/* Delete Button in Table */
+td form button {
+    background: var(--accent);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+td form button:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Logout Button */
+.logout-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: var(--transition);
+}
+
+.logout-btn:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .grade-form form {
+        grid-template-columns: 1fr;
+    }
+
+    .filters form {
+        flex-direction: column;
+    }
+
+    .filters input,
+    .filters select,
+    .filters button {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+.student-list {
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+.edit-btn {
+    background: var(--secondary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: var(--accent);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.admin-nav {
+    background: var(--primary);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.admin-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.admin-nav .nav-link:hover {
+    background: var(--secondary);
+}
+
+.admin-nav .nav-link.active {
+    background: var(--secondary);
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-btn {
+    padding: 12px 24px;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search-btn:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+.logout-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.logout-button:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.home-button {
+    
+    bottom:0px;
+    right: 0px;
+    padding: 12px 24px;
+    background: #214780;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.home-button:hover {
+    background: #218080;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.notification {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    min-width: 300px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    animation: slideInRight 0.5s ease-out;
+    display: flex;
+    align-items: center;
+}
+
+.notification-text {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.notification.success {
+    background: #2ecc71;
+    border-left: 5px solid #27ae60;
+}
+
+.notification.error {
+    background: #e74c3c;
+    border-left: 5px solid #c0392b;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(110%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(110%);
+        opacity: 0;
+    }
+}
+/* News Management Section Styling */
+#news-management {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#news-management h2 {
+    color: #214780;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Add News Form Styling */
+#news-management form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#news-management input[type="text"],
+#news-management input[type="date"],
+#news-management textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#news-management input[type="text"]:focus,
+#news-management input[type="date"]:focus,
+#news-management textarea:focus {
+    border-color: #214780;
+    outline: none;
+}
+
+#news-management textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#news-management input[type="file"] {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f9f9f9;
+}
+
+#news-management button[type="submit"] {
+    background: #214780;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#news-management button[type="submit"]:hover {
+    background: #1a365d;
+    transform: translateY(-2px);
+}
+
+/* Edit News Form Styling */
+.edit-news-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.edit-news-form h2 {
+    color: #214780;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.edit-news-form input[type="text"],
+.edit-news-form input[type="date"],
+.edit-news-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.edit-news-form input[type="text"]:focus,
+.edit-news-form input[type="date"]:focus,
+.edit-news-form textarea:focus {
+    border-color: #214780;
+    outline: none;
+}
+
+.edit-news-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.edit-news-form input[type="file"] {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f9f9f9;
+}
+
+.edit-news-form button[type="submit"] {
+    background: #214780;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.edit-news-form button[type="submit"]:hover {
+    background: #1a365d;
+    transform: translateY(-2px);
+}
+
+/* Existing News Table Styling */
+#news-management table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#news-management th,
+#news-management td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#news-management th {
+    background: #214780;
+    color: white;
+}
+
+#news-management tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+#news-management tr:hover {
+    background: #f1f1f1;
+}
+
+#news-management .edit-btn,
+#news-management .delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#news-management .edit-btn {
+    background: #4CAF50;
+    color: white;
+    margin-right: 5px;
+}
+
+#news-management .edit-btn:hover {
+    background: #45a049;
+}
+
+#news-management .delete-btn {
+    background: #f44336;
+    color: white;
+}
+
+#news-management .delete-btn:hover {
+    background: #e53935;
+}
